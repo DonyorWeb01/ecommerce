@@ -1,0 +1,252 @@
+@mixin font($fz, $fw, $lh){
+    font-size: $fz+px;
+    font-weight: $fw;
+    line-height: $lh+px;
+}
+
+.cart{
+    margin-top: 80px;
+    margin-bottom: 140px;
+    .container{
+     display: flex;
+     flex-direction: column;
+     p{
+        @include font(14, 400, 21);
+        color: #000000;
+        a{
+            @include font(14, 400, 21);
+            color: gray;
+        }
+     }
+     .cart-main{
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        ul{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            li{
+                list-style: none;
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+                padding: 24px 40px;
+                box-shadow: 0px 1px 13px 0px #0000000D;
+                border-radius: 4px;
+                margin-top: 40px;
+                p{
+                    @include font(16, 400, 24);
+                    color: #000;
+                    width: 19%;
+                    text-align: center;
+                }
+                .product{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    width: 19%;
+                    .img{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                            width: 54px;
+                            height: 54px;
+                            object-fit: cover;
+                        }
+                    }
+                    p{
+                        @include font(16, 400, 24);
+                        color: #000;
+                        text-align: start;
+                        display: -webkit-box;
+                        width: 190px;
+                        -webkit-line-clamp: 2;     /* Qatorlar sonini belgilang */
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;   /* Oxiriga uch nuqta qo'yadi */
+                        max-height: 4.5em;
+                    }
+                }
+                .count{
+                    width: 19%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .counter{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 20px;
+                        border: solid 1px gray;
+                        padding: 5px;
+                        border-radius: 4px;
+                        max-width: 75px;
+                        h2{
+                            @include font(16, 400, 24);
+                            color: #000;
+                            width: 20px;
+                            margin-top: 7px;
+                        }
+                        .btns{
+                            display: flex;
+                            flex-direction: column;
+                            button{
+                                cursor: pointer;
+                                background: none;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: none;
+                                font-size: 15px;
+                                color: #000;
+                            }
+                            .top{
+                                transform: rotateZ(180deg);
+                            }
+                        }
+                    }
+                }
+                .subtotal{
+                    display: flex;
+                    align-items: start;
+                    justify-content: center;
+                    width: 19%;
+                    p{
+                        @include font(16, 400, 24);
+                        color: #000;
+                    }
+                }
+                .buttons{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 24px;
+                    width: 19%;
+                    button{
+                        cursor: pointer;
+                        border: solid 1px gray;
+                        border-radius: 4px;
+                        padding: 2px;
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 20px;
+                        color: #000;
+                    }
+                }
+            }
+            .error1{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 120px 0px;
+            }
+            .loader{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                background-color: #fff;
+                height: 400px;
+            }
+        }
+        .btns1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 24px;
+            button{
+                @include font(16, 500, 24);
+                color: #000;
+                cursor: pointer;
+                background: none;
+                border: solid 1px gray;
+                padding: 16px 48px;
+                border-radius: 4px;
+            }
+        }
+     }
+     .subtotal-info{
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 50px;
+        margin-top: 80px;
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 16px;
+            input{
+                @include font(16, 400, 24);
+                color: #000;
+                outline: none;
+                border: solid 1px gray;
+                padding: 16px 24px;
+                border-radius: 4px;
+                background: none;
+            }
+            button{
+                cursor: pointer;
+                background-color: #DB4444;
+                padding: 16px, 48px;
+                @include font(16, 500, 24);
+                color: #FAFAFA;
+                border: none;
+                padding: 16px 24px;
+                border-radius: 4px;
+            }
+        }
+        .cart-total{
+            padding: 32px 24px;
+            border: solid 1px gray;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            max-width: 480px;
+            width: 100%;
+            h1{
+                @include font(20, 500, 28);
+                color: #000;
+            }
+            .text{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                margin-top: 16px;
+                p{
+                    @include font(16, 400, 24);
+                    color: #000;
+                }
+            }
+            .line{
+                margin-top: 16px;
+                width: 100%;
+                height: 0px;
+                border: solid 1px gray;
+            }
+            button{
+                cursor: pointer;
+                background-color: #DB4444;
+                padding: 16px, 48px;
+                @include font(16, 500, 24);
+                color: #FAFAFA;
+                border: none;
+                padding: 16px 24px;
+                border-radius: 4px;
+                margin-top: 16px;
+                max-width: 270px;
+                margin: 0 auto;
+            }
+        }
+     }
+    }
+}

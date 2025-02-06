@@ -1,0 +1,79 @@
+@mixin font($fz, $fw, $lh){
+    font-size: $fz+px;
+    font-weight: $fw;
+    line-height: $lh+px;
+}
+
+.login{
+    margin-top: 60px;
+    margin-bottom: 140px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 99px;
+        .img{
+            background-color: #CBE4E9;
+            img{
+                width: 700px;
+                height: 600px;
+            }
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            h1{
+                @include font(36, 500, 30);
+                color: #000000;
+            }
+            p{
+                @include font(16, 400, 24);
+                color: #000000;
+                margin-top: 24px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                margin-top: 48px;
+                input{
+                    outline: none;
+                    width: 100%;
+                    background: none;
+                    @include font(16, 400, 24);
+                    color: #000000;
+                    margin-top: 40px;
+                    border: none;
+                }
+                .line{
+                    width: 100%;
+                    height: 0px;
+                    border: solid 1px #000000;
+                    margin-top: 8px;
+                }
+                .btns{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 80px;
+                    margin-top: 40px;
+                    .log{
+                        cursor: pointer;
+                        background-color: #DB4444;
+                        border-radius: 4px;
+                        padding: 16px 48px;
+                        @include font(16, 500, 24);
+                        color: #FAFAFA;
+                        border: none;
+                    }
+                    .forget{
+                        border: none;
+                        background: none;
+                        cursor: pointer;
+                        @include font(16, 400, 24);
+                        color: #DB4444;
+                    }
+                }
+            }
+        }
+    }
+}

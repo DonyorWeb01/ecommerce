@@ -1,0 +1,308 @@
+@mixin font($fz, $fw, $lh){
+    font-size: $fz+px;
+    font-weight: $fw;
+    line-height: $lh+px;
+}
+
+.OneCard{
+    margin-top: 80px;
+    margin-bottom: 140px;
+    .container{
+      p{
+        @include font(14, 400, 21);
+        color: gray;
+        span{
+            color: #000;
+        }
+      }
+      .oneCard-main{
+        margin-top: 80px;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        gap: 70px;
+        .images{
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            gap: 30px;
+            .imgs{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                img{
+                    cursor: pointer;
+                    width: 170px;
+                    height: 140px;
+                    object-fit: cover;
+                }
+            }
+            .main-img{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    object-fit: cover;
+                    width: 500px;
+                    height: 600px;
+                }
+            }
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            h1{
+                @include font(24, 600, 24);
+                color: #000;
+                font-family: 'inter';
+                display: -webkit-box;
+                width: 320px;
+                -webkit-line-clamp: 1;     /* Qatorlar sonini belgilang */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;   /* Oxiriga uch nuqta qo'yadi */
+                max-height: 4.5em;
+            }
+            .stars{
+                display: flex;
+                margin-top: 16px;
+                align-items: center;
+                gap: 12px;
+                p{
+                    @include font(14, 400, 21);
+                    color: gray;
+                    margin-bottom:25px;
+                }
+                a{
+                    @include font(14, 400, 21);
+                    color: #00FF66;
+                }
+            }
+            h2{
+                @include font(24, 400, 24);
+                color: #000;
+                span{
+                    color: gray;
+                    margin-left: 5px;
+                    text-decoration: line-through;
+                    margin-left: 15px;
+                }
+            }
+            p{
+                @include font(14, 400, 21);
+                color: #000000;
+                max-width: 373px;
+                margin-top: 24px;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;     /* Qatorlar sonini belgilang */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;   /* Oxiriga uch nuqta qo'yadi */
+                max-height: 4.5em;
+            }
+            .line{
+                margin-top: 24px;
+                width: 100%;
+                height: 0px;
+                border: solid 1px gray;
+            }
+            .colors{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                p{
+                    @include font(20, 400, 20);
+                    color: #000;
+                }
+                .color{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    border: solid 2px #fff;
+                    margin-top: 25px;
+                    border: solid 1px gray;
+                }
+            }
+            .size{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                .textSize{
+                    @include font(20, 400, 20);
+                    color: #000;
+                    margin-bottom: 20px;
+                }
+                .sizeBtn{
+                    cursor: pointer;
+                    background: none;
+                    border: solid 1px #000;
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include font(14, 500, 21);
+                    color: #000;
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+            .btns{
+                margin-top: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                .counter{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: solid 2px gray;
+                    border-radius: 4px;
+                    gap: 16px;
+                    .btn1{
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                        background-color: #DB4444;
+                        width: 32px;
+                        height: 32px;
+                        @include font(20, 500, 18);
+                        color: #ffffff;
+                    }
+                    h3{
+                        @include font(20, 500, 28);
+                        color: #000;
+                        width: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .buy1{
+                    cursor: pointer;
+                    background-color: #DB4444;
+                    border: none;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-grow: 1;
+                    border-radius: 4px;
+                    @include font(16, 500, 24);
+                    color: #FAFAFA;
+                }
+                .like{
+                    cursor: pointer;
+                    width: 32px;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 15px;
+                    color: #000;
+                    background: none;
+                    border: 1px solid gray;
+                    border-radius: 4px;
+                }
+            }
+            .dostavka1{
+                display: flex;
+                flex-direction: column;
+                border: solid 1px gray;
+                border-radius: 4px;
+                padding: 24px 16px;
+                margin-top: 40px;
+                .top1{
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 16px;
+                  .top{
+                    .img{
+                        font-size: 35px;
+                        color: #000;
+                    }
+                  }
+                  .end{
+                    display: flex;
+                    flex-direction: column;
+                    h4{
+                        @include font(16, 500, 24);
+                        color: #000;
+                    }
+                    a{
+                        @include font(12, 500, 18);
+                        color: #000;
+                        margin-top: 8px;
+                    }
+                  }
+                }
+                .line{
+                    width: 100%;
+                    height: 0px;
+                    border: solid 1px gray;
+                }
+                .end1{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 16px;
+                    margin-top: 16px;
+                    .top{
+                        .img{
+                            font-size: 35px;
+                            color: #000;
+                        }
+                      }
+                      .end{
+                        display: flex;
+                        flex-direction: column;
+                        h4{
+                            @include font(16, 500, 24);
+                            color: #000;
+                        }
+                        a{
+                            @include font(12, 500, 18);
+                            color: #000;
+                            margin-top: 8px;
+                        }
+                      }
+                }
+            }
+        }
+      }
+      .text-skeleton{
+        margin-bottom: 80px;
+      }
+      .skeleton{
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        .skeleton-img{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            .skeleton-imgs{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+          }
+          .skeleton-info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+          }
+      }
+    }
+}
+
+
+
+.active{
+    border: solid 1px gray;
+    box-shadow: 0px 0px 5px 3px gray;
+}

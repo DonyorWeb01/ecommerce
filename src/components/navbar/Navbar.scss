@@ -1,0 +1,330 @@
+@mixin font($fz, $fw, $lh){
+    font-size: $fz+px;
+    font-weight: $fw;
+    line-height: $lh+px;
+}
+
+.navbarTop{
+    background-color: #000;
+    padding: 12px 0px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 231px;
+        .text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            p{
+               @include font(14, 400, 21);
+               color: #fafafa;
+            }
+            a{
+                @include font(14, 600, 24);
+                color: #fafafa;
+                text-decoration: underline;
+            }
+        }
+        select{
+            @include font(14, 400, 21);
+            color: #fafafa;
+            background: none;
+            border: none;
+        }
+    }
+}
+
+.navbarMain{
+    background-color: #fff;
+    padding: 23px 0px 10px 0px;
+    border-bottom: solid 1px gray;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1{
+            @include font(24, 700, 24);
+            font-family: 'inter';
+            color: #000;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            li{
+                list-style: none;
+                a{
+                    @include font(16, 400, 24);
+                    color: #000;
+                }
+            }
+        }
+        .navbarEnd{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            form{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2px;
+                padding: 7px 12px 7px 15px;
+                background-color: #F5F5F5;
+                border-radius: 4px;
+                max-width: 270px;
+                input{
+                    @include font(12, 400, 18);
+                    color: #000;
+                    outline: none;
+                    border: none;
+                    width: 100%;
+                    background: none;
+                }
+                .searchBtn{
+                    cursor: pointer;
+                    font-size: 28px;
+                    color: #000;
+                }
+            }
+            .btns{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                button{
+                    position: relative;
+                    padding: 4px;
+                    border-radius: 4px;
+                    background: none;
+                    border: none;
+                    font-size: 30px;
+                    color: #000;
+                    cursor: pointer;
+                    span{
+                        position: absolute;
+                        left: 25px;
+                        bottom: 302x;
+                        background-color:#DB4444;
+                        padding: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @include font(12, 400, 8);
+                        color: #FAFAFA;
+                        border-radius: 50%;
+                    }
+                }
+                .userModal{
+                    position: absolute;
+                    z-index: 10;
+                    width: 250px;
+                    top: 50px;
+                    right: 0px;
+                    border-radius: 4px;
+                    backdrop-filter: blur(150px);
+                    padding: 15px;
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        gap: 10px;
+                        li{
+                            list-style: none;
+                            p{
+                                @include font(18, 400, 21);
+                                color: #FAFAFA;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.modalUserInfo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul{
+        position: relative;
+        width: 700px;
+        height: auto;
+        border-radius: 5px;
+        backdrop-filter: blur(150px);
+        background-color: #000000ac;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        padding: 50px;
+        .btn{
+         position: absolute;
+         top: 10px;
+         right: 10px;
+         @include font(40, 500, 44);
+         cursor: pointer;
+         color: #fff;
+        }
+        li{
+            list-style: none;
+            @include font(20, 500, 24);
+            color: #fff;
+            span{
+                color: gray;
+            }
+        }
+    }
+}
+
+ .overlay {
+        position: fixed; /* Butun ekranni qoplash uchun */
+        top: 0;
+        left: 0;
+        width: 100%; /* Ekran kengligini to'liq egallash */
+        height: 100vh; /* Ekran balandligini to'liq egallash */
+        background-color: rgba(0, 0, 0, 0.5); /* Yarim shaffof qora fon */
+        z-index: 9; /* Overlay yuqori qatlamda bo'lishi uchun */
+}
+
+@media (max-width: 1024px) {
+    .navbarTop{
+        .container{
+            .text{
+                p{
+                   @include font(8, 400, 14);
+                }
+                a{
+                    @include font(8, 500, 14);
+                }
+            }
+            select{
+                @include font(10, 400, 16);
+            }
+        }
+    }
+    .navbarMain{
+    background-color: #fff;
+    padding: 23px 0px 10px 0px;
+    border-bottom: solid 1px gray;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1{
+            @include font(20, 700, 24);
+            font-family: 'inter';
+            color: #000;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            li{
+                list-style: none;
+                a{
+                    @include font(16, 400, 24);
+                    color: #000;
+                }
+            }
+        }
+        .navbarEnd{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            form{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2px;
+                padding: 7px 12px 7px 15px;
+                background-color: #F5F5F5;
+                border-radius: 4px;
+                max-width: 240px;
+                input{
+                    @include font(10, 400, 14);
+                    color: #000;
+                    outline: none;
+                    border: none;
+                    width: 100%;
+                    background: none;
+                }
+                .searchBtn{
+                    cursor: pointer;
+                    font-size: 22px;
+                    color: #000;
+                }
+            }
+            .btns{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                button{
+                    position: relative;
+                    padding: 4px;
+                    border-radius: 4px;
+                    background: none;
+                    border: none;
+                    font-size: 30px;
+                    color: #000;
+                    cursor: pointer;
+                    span{
+                        position: absolute;
+                        left: 25px;
+                        bottom: 302x;
+                        background-color:#DB4444;
+                        padding: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @include font(12, 400, 8);
+                        color: #FAFAFA;
+                        border-radius: 50%;
+                    }
+                }
+                .userModal{
+                    position: absolute;
+                    z-index: 10;
+                    width: 250px;
+                    top: 50px;
+                    right: 0px;
+                    border-radius: 4px;
+                    backdrop-filter: blur(150px);
+                    padding: 15px;
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        gap: 10px;
+                        li{
+                            list-style: none;
+                            p{
+                                @include font(18, 400, 21);
+                                color: #FAFAFA;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}

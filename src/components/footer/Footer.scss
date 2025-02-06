@@ -1,0 +1,231 @@
+@mixin font($fz, $fw, $lh){
+    font-size: $fz+px;
+    font-weight: $fw;
+    line-height: $lh+px;
+}
+
+.footer{
+    background-color: #000;
+    padding: 80px 0px 60px 0px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .footerMain{
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 67px;
+            li{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                list-style: none;
+                h2{
+                    @include font(20, 500, 28);
+                    color: #fafafa;
+                    margin-bottom: 24px;
+                }
+                p{
+                    @include font(12, 400, 24);
+                    color: #fafafa;
+                    margin-bottom: 16px;
+                }
+            }
+            .one{
+                h1{
+                    @include font(24, 700, 24);
+                    font-family: 'inter';
+                    color: #fafafa;
+                    margin-bottom: 24px;
+                }
+                form{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2px;
+                    border: solid 1.5px #fafafa;
+                    border-radius: 4px;
+                    padding: 12px 16px;
+                    background: none;
+                    max-width: 217px;
+                    font-size: 22px;
+                    color: #fafafa;
+                    input{
+                        @include font(16, 400, 24);
+                        color: #fafafa;
+                        outline: none;
+                        width: 100%;
+                        border: none;
+                        background: none;
+                    }
+                }
+            }
+            .five{
+                display: flex;
+                flex-direction: column;
+                .appQR{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    margin-bottom: 24px;
+                    img{
+                        width: 76px;
+                        height: 76px;
+                    }
+                    .apps{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        button{
+                            cursor: pointer;
+                            background: none;
+                            border: none;
+                            img{
+                                width: 104px;
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+                .btns{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 24px;
+                    button{
+                        cursor: pointer;
+                        background: none;
+                        border: none;
+                        color: #fafafa;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footerEnd{
+    background-color: #000;
+    border-top: solid 1px #fafafa;
+    .container{
+        padding: 16px 0px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            @include font(16, 400, 24);
+            color: #fff;
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .footer{
+        background-color: #000;
+        padding: 80px 0px 60px 0px;
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .footerMain{
+                display: flex;
+                align-items: start;
+                justify-content: space-between;
+                gap: 27px;
+                li{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    list-style: none;
+                    h2{
+                        @include font(20, 500, 28);
+                        color: #fafafa;
+                        margin-bottom: 14px;
+                    }
+                    p{
+                        @include font(12, 400, 24);
+                        color: #fafafa;
+                        margin-bottom: 10px;
+                    }
+                }
+                .one{
+                    h1{
+                        @include font(24, 700, 24);
+                        font-family: 'inter';
+                        color: #fafafa;
+                        margin-bottom: 24px;
+                    }
+                    form{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 2px;
+                        border: solid 1.5px #fafafa;
+                        border-radius: 4px;
+                        padding: 4px 6px;
+                        background: none;
+                        max-width: 217px;
+                        font-size: 12px;
+                        color: #fafafa;
+                        input{
+                            @include font(12, 400, 18);
+                            color: #fafafa;
+                            outline: none;
+                            width: 100%;
+                            border: none;
+                            background: none;
+                        }
+                    }
+                }
+                .five{
+                    display: flex;
+                    flex-direction: column;
+                    .appQR{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+                        margin-bottom: 24px;
+                        img{
+                            width: 76px;
+                            height: 76px;
+                        }
+                        .apps{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-between;
+                            button{
+                                cursor: pointer;
+                                background: none;
+                                border: none;
+                                img{
+                                    width: 104px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
+                    .btns{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 24px;
+                        button{
+                            cursor: pointer;
+                            background: none;
+                            border: none;
+                            color: #fafafa;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,146 @@
+@mixin font($fz, $fw, $lh){
+    font-size: $fz+px;
+    font-weight: $fw;
+    line-height: $lh+px;
+}
+
+// .App {
+//     font-family: Arial, sans-serif;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     background-color: #f9f9f9;
+//   }
+  .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact-card {
+    width: 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+  }
+  
+  .contact-section {
+    // text-align: center;
+    margin-bottom: 20px;
+    .flex_2{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-weight: 400;
+        svg{
+            background-color: red;
+            color: white;
+            // padding: 10px;
+            font-size: 30px;
+            padding: 5px;
+            border-radius: 50%;
+        }
+    }
+    p{
+        font-size: 13px;
+    }
+    p{
+        text-align: left;
+    }
+  }
+ .lineh{
+    p{
+        margin-top: 10px;
+    }
+ }
+  .icon {
+    font-size: 24px;
+    color: #e74c3c;
+  }
+  
+  h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  
+p{
+    @include font(14, 400, 21);
+    color: #464646;
+    a{
+        @include font(14, 400, 21);
+        color: #464646;  
+    }
+    span{
+        color: #000000;
+    }
+}
+.contactp{
+    padding: 100px 0px;
+}
+.pd{
+    margin-bottom: 80px;
+}
+.contact-form {
+    // display: grid;
+    gap: 16px;
+    // max-width: 600px;
+    // margin: auto;
+
+  }
+  
+  .form-input,
+  .form-textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .form-textarea {
+    resize: none;
+    height: 200px;
+    background-color: #F5F5F5;
+    outline: none;
+    border: none;
+    margin-top: 25px;
+  }
+  
+  .form-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    width: 270px;
+    margin-left: 428px;
+    cursor: pointer;
+  }
+  
+  .form-button:hover {
+    background-color: #c9302c;
+  }
+.flexx{
+    display: flex;
+    gap: 20px;
+    input{
+        background-color: #F5F5F5;
+        border: none;
+        outline: none;
+    }
+}

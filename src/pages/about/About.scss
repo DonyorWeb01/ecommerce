@@ -1,0 +1,220 @@
+@mixin font($fz, $fw, $lh){
+    font-size: $fz+px;
+    font-weight: $fw;
+    line-height: $lh+px;
+}
+
+.about{
+    margin-top: 80px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        p{
+            @include font(14, 400, 21);
+            color: #464646;
+            a{
+                @include font(14, 400, 21);
+                color: #464646;  
+            }
+            span{
+                color: #000000;
+            }
+        }
+        .story{
+            margin-top: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 75px;
+            .info{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                h1{
+                    @include font(54, 600, 64);
+                    color: #000000;
+                    font-family: 'inter';
+                }
+                p{
+                   display: flex;
+                   flex-direction: column;
+                   gap: 24px;  
+                    span{
+                        @include font(16, 400, 26);
+                        color: #000000;
+                        max-width: 525px;
+                    }
+                }
+            }
+            .img{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                  width: 600px;
+                  height: 500px;
+                }
+            }
+        }
+        .bonus{
+            margin-top: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            .card{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+                border: solid 1px #000000;
+                border-radius: 4px;
+                // width: 270px;
+                // height: 270px;
+                padding: 30px 40px;
+                &:hover{
+                    background-color: #DB4444;
+                    .icon{
+                        background-color: #fff;
+                        color: #000000;
+                    }
+                    h1{
+                        color: #fff;
+                    }
+                    p{
+                        color: #fff;
+                    }
+                }
+                .icon{
+                    border: solid 5px #c1c0c1;
+                    background-color: #000000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    font-size: 36px;
+                    color: #fff;
+                    width: 65px;
+                    height: 65px;
+                }
+                h1{
+                    @include font(32, 700, 30);
+                    color: #000000;
+                    margin-top: 24px;
+                }
+                p{
+                    @include font(16, 400, 24);
+                    color: #000000;
+                    margin-top: 12px;
+                }
+            }
+        }
+        .people{
+            margin-top: 140px;
+            .cards{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                .card1{
+                    display: flex;
+                    flex-direction: column;
+                    .img{
+                        background-color: #F5F5F5;
+                        width: 100%;
+                        padding: 39px 67px 0px 67px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img{
+                            width: 236px;
+                            height: 391px;
+                        }
+                    }
+                    .info{
+                        display: flex;
+                        flex-direction: column;
+                        padding-top:32px ;
+                        h1{
+                            @include font(32, 500, 30);
+                            color: #000000;
+                            font-family: 'inter';
+                        }
+                        p{
+                            @include font(16, 400, 24);
+                            color: #000000;
+                            margin-top: 8px;
+                        }
+                        .btns{
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                            gap: 16px;
+                            button{
+                                cursor: pointer;
+                                background: none;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: none;
+                                font-size: 22px;
+                                color: #000000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .dostavka{
+            margin-bottom: 140px;
+            margin-top: 140px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .card{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border: none;
+                    cursor: pointer;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                    .img{
+                        border: solid 5px #c1c0c1;
+                        background-color: #000000;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        font-size: 40px;
+                        color: #fff;
+                        width: 65px;
+                        height: 65px;
+                    }
+                    h1{
+                        @include font(20, 600, 28);
+                        color: #000000;
+                        margin-top: 24px;
+                        max-width: 350px;
+                    }
+                    p{
+                        @include font(14, 400, 21);
+                        color: #000000;
+                        margin-top: 8px;
+                    }
+                }
+        }
+    }
+}
+
+
+.swiper-pagination{
+    span{
+        background-color: #DB4444;
+        border: solid 1px #FAFAFA;
+        width: 12px;
+        height: 12px;
+    }
+  }
+  

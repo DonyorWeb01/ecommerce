@@ -1,0 +1,101 @@
+@mixin font($fz, $fw, $lh){
+    font-size: $fz+px;
+    font-weight: $fw;
+    line-height: $lh+px;
+}
+
+.sign{
+    margin-top: 60px;
+    margin-bottom: 140px;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 99px;
+        .img{
+            background-color: #CBE4E9;
+            img{
+                width: 700px;
+                height: 600px;
+            }
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            h1{
+                @include font(36, 500, 30);
+                color: #000000;
+            }
+            p{
+                @include font(16, 400, 24);
+                color: #000000;
+                margin-top: 24px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                input{
+                    outline: none;
+                    width: 100%;
+                    background: none;
+                    @include font(16, 400, 24);
+                    color: #000000;
+                    margin-top: 40px;
+                    border: none;
+                }
+                .line{
+                    width: 100%;
+                    height: 0px;
+                    border: solid 1px #000000;
+                    margin-top: 8px;
+                }
+                button{
+                    cursor: pointer;
+                    width: 100%;
+                    background-color: #DB4444;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include font(16, 500, 24);
+                    color: #FAFAFA;
+                    border-radius: 4px;
+                    border: none;
+                    margin-top: 40px;
+                    padding: 16px 0px;
+                }
+                .button{
+                    button{
+                    cursor: pointer;
+                    width: 100%;
+                    background: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    justify-content: center;
+                    border-radius: 4px;
+                    border: solid 1px #000000;
+                    margin-top: 16px;
+                    // padding: 16px 0px;
+                        @include font(16, 400, 16);
+                        color: #000000;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .btn{
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+            p{
+                @include font(16, 400, 24);
+                color: #000000;
+                a{
+                    @include font(16, 500, 24);
+                    color: #000000;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

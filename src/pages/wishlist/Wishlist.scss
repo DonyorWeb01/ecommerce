@@ -1,0 +1,144 @@
+@mixin font($fz, $fw, $lh){
+    font-size: $fz+px;
+    font-weight: $fw;
+    line-height: $lh+px;
+}
+
+
+.wishlist{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        .wishlist-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h1{
+                @include font(20, 400, 26);
+                color: #000;
+            }
+            button{
+                cursor: pointer;
+                padding: 16px 48px;
+                border-radius: 4px;
+                border: solid 1px gray;
+                @include font(16, 500, 24);
+                color: #000;
+                background: none;
+            }
+        }
+        .cards{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            .error1{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 120px 0px;
+            }
+            .card{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                max-width: 270px;
+                overflow: hidden;
+                border-radius: 4px;
+                padding: 8px;
+                border: solid 1px gray;
+                background-color: #f5f5f5;
+                .discount{
+                    position: absolute;
+                    z-index: 1;
+                    top: 12px;
+                    left: 12px;
+                    padding: 4px 12px;
+                    background-color: #DB4444;
+                    border-radius: 4px;
+                    @include font(12, 400, 18);
+                    color: #fafafa;
+                }
+                .discount.block{
+                    display: none;
+                }
+                .like{
+                    position: absolute;
+                    z-index: 1;
+                    top: 12px;
+                    right: 12px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 5px;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    color: #000;
+                    border: none;
+                    background-color: rgb(232, 229, 229);
+                }
+                a{
+                    margin: 0 auto;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        object-fit: contain;
+                        width: 190px;
+                        height: 180px;
+                        margin: 0 auto;
+                    }
+                }
+                .add{
+                    cursor: pointer;
+                    width: 100%;
+                    background-color: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    color: #fafafa;
+                    font-size: 20px;
+                    padding: 8px 0px;
+                    border: none;
+                    border-radius: 4px;
+                    p{
+                        @include font(12, 400, 18);
+                        color: #fafafa;
+                    }
+                }
+                .name{
+                    @include font(16, 500, 24);
+                    color: #000;
+                    margin-top: 16px;
+                    width: 250px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;     /* Qatorlar sonini belgilang */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;   /* Oxiriga uch nuqta qo'yadi */
+                    max-height: 4.5em;
+                }
+                .price{
+                    @include font(16, 500, 24);
+                    color: #DB4444;
+                    margin-top: 8px;
+                    margin-bottom: 10px;
+                    span{
+                        color: gray;
+                        text-decoration: line-through;
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
