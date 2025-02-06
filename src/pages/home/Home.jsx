@@ -23,7 +23,6 @@ import AddCartModal from "../../components/addCart/AddCartModal";
 import { getToken } from "../services/Token";
 import { Skeleton } from "@mui/material";
 import { toast } from "react-toastify";
-import { RxHamburgerMenu } from "react-icons/rx";
 
 // impoer for img
 import imgApple from "../../../public/images/apple.png"

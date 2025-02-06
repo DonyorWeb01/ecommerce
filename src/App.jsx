@@ -14,7 +14,6 @@ import Cart from "./pages/cart/Cart";
 import { ToastContainer, toast } from "react-toastify";
 import Wishlist from "./pages/wishlist/Wishlist";
 import Contact from "./pages/contact/Contact";
-import ProductList from "./components/productList/ProductList";
 
 function App() {
 
@@ -250,7 +249,6 @@ function App() {
           wishListNumber={wishListNumber}
           items={items}
         />
-        <ProductList/>
         <Routes>
           <Route
             path="/"
