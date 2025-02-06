@@ -4,6 +4,10 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { GoPaperAirplane } from 'react-icons/go'
 import './Footer.scss'
 
+import imgQR from "../../../public/images/Qrcode 1.png"
+import imgPlayMarket from "../../../public/images/playMarket.png"
+import imgAppStore from "../../../public/images/appstore.png"
+
 function Footer() {
   return (
     <div>
@@ -44,13 +48,13 @@ function Footer() {
             <h2>Download App</h2>
             <p>Save $3 with App New User Only</p>
             <div className="appQR">
-                <img src="../public/images/Qrcode 1.png" alt="" />
+                <img src={imgQR} alt="" />
                 <div className="apps">
                     <button>
-                        <img src="../public/images/playMarket.png" alt="" />
+                        <img src={imgPlayMarket}alt="" />
                     </button>
                     <button>
-                        <img src="../public/images/appstore.png" alt="" />
+                        <img src={imgAppStore} alt="" />
                     </button>
                 </div>
             </div>

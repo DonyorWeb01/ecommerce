@@ -27,6 +27,8 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 // impoer for img
 import imgApple from "../../../public/images/apple.png"
+import imgiPhone from "../../../public/images/iPhone.png"
+
 
 function Home({CartItems, data, loader, modalOpen,  setModalOpen, selectedProductId, setSelectedProductId, AddWishlist, getData, category}) {
   
@@ -174,7 +176,7 @@ function Home({CartItems, data, loader, modalOpen,  setModalOpen, selectedProduc
                     </button>
                   </div>
                   <div className="img">
-                    <img src="../public/images/iPhone.png" alt="" />
+                    <img src={imgiPhone} alt="" />
                   </div>
                 </div>
               </SwiperSlide>
@@ -182,7 +184,7 @@ function Home({CartItems, data, loader, modalOpen,  setModalOpen, selectedProduc
                 <div className="hero-main-img">
                   <div className="img-info">
                     <div className="name">
-                      <img src="../public/images/apple.png" alt="" />
+                      <img src={imgApple}alt="" />
                       <p>iPhone 15 Series</p>
                     </div>
                     <h1>Up to 20% off Voucher</h1>
@@ -191,7 +193,7 @@ function Home({CartItems, data, loader, modalOpen,  setModalOpen, selectedProduc
                     </button>
                   </div>
                   <div className="img">
-                    <img src="../public/images/iPhone.png" alt="" />
+                    <img src={imgiPhone} alt="" />
                   </div>
                 </div>
               </SwiperSlide>
@@ -199,7 +201,7 @@ function Home({CartItems, data, loader, modalOpen,  setModalOpen, selectedProduc
                 <div className="hero-main-img">
                   <div className="img-info">
                     <div className="name">
-                      <img src="../public/images/apple.png" alt="" />
+                      <img src={imgApple} alt="" />
                       <p>iPhone 16 Series</p>
                     </div>
                     <h1>Up to 30% off Voucher</h1>
@@ -208,7 +210,7 @@ function Home({CartItems, data, loader, modalOpen,  setModalOpen, selectedProduc
                     </button>
                   </div>
                   <div className="img">
-                    <img src="../public/images/iPhone.png" alt="" />
+                    <img src={imgiPhone} alt="" />
                   </div>
                 </div>
               </SwiperSlide>
